@@ -15,9 +15,11 @@ function Navbar() {
           <Link href={'/'} className='text-white/90  no-underline hover:text-white'> zin
           </Link>
         </h1>
-        <div id='search-bar'>
+
+        <div id='search-bar' className=' grid place-content-center mb-2 md:mb-0'>
           <SearchBar/> 
         </div>
+        
         <div id='all-social-links' className='flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl'>
 
           <Link href={'/'} className=' text-white/90 hover:text-white'> <FaTwitter/>

@@ -43,6 +43,7 @@ function SearchPage() {
       <p className='mx-auto text-xl dark:text-white/75'>Search results for &quot{searchQuery}&quot</p>
       <ul className='w-full'>
         {data.asyncRes.map((post: BlogPost) => (
+          
           // <li key={idx}>{post.title}</li>
           <ListItem post={post} key={post.id} />
         ))}

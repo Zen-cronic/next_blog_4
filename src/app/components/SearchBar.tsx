@@ -31,7 +31,7 @@ function SearchBar() {
       <input value={searchQuery ||""}
       onChange={e=>setSearchQuery(e.target.value)}
 
-      className='p-1'
+      className='p-1 rounded-md'
       />
     </form>
   );
