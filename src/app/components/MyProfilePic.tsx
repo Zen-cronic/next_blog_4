@@ -7,8 +7,8 @@ export default function MyProfilePic() {
             <Image
                 className="border-4 border-black dark:border-slate-500 drop-shadow-xl shadow-black 
                mx-auto mt-8 rounded-full"
-               src={'/img/hypoImg.png'}
-               alt="Z H"
+               src={'/img/profile_600.jpg'}
+               alt="kzh"
                width={300}
                height={300}
             />

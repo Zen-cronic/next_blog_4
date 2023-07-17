@@ -24,7 +24,8 @@ function SearchBar() {
   }
   return (
     <form onSubmit={onSearch}
-    className='dark:text-black-400 text-black text-2xl'>
+    className='dark:text-black-400 text-black text-2xl mx-auto 
+    max-w-md'>
 
 
       <input value={searchQuery ||""}

@@ -21,7 +21,7 @@ export default function RootLayout({
         
         <Navbar/>
         {/* <SearchBar/>  inside navbar*/}
-        <MyProfilePic/>
+        {/* <MyProfilePic/> */}
         {children}</body>
     </html>
   )
