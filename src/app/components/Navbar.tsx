@@ -19,12 +19,12 @@ function Navbar() {
         <div id='search-bar' className=' grid place-content-center mb-2 md:mb-0'>
           <SearchBar/> 
         </div>
-        
+
         <div id='all-social-links' className='flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl'>
 
-          <Link href={'/'} className=' text-white/90 hover:text-white'> <FaTwitter/>
+          <Link href={'https://twitter.com/zinheinkg'} className=' text-white/90 hover:text-white'> <FaTwitter/>
           </Link>
-          <Link href={'/'} className='text-white/90 hover:text-white'> 
+          <Link href={'https://medium.com/@kaungzinhein'} className='text-white/90 hover:text-white'> 
           <FaMedium/>
           </Link>
 
