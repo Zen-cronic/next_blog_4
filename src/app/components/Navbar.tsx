@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaYoutube, FaTwitter, FaGithub, FaLaptop , FaMedium} from "react-icons/fa"
+import { FaYoutube,  FaGithub,  FaMedium} from "react-icons/fa"
 import SearchBar from './SearchBar';
 
 function Navbar() {
@@ -22,10 +22,13 @@ function Navbar() {
 
         <div id='all-social-links' className='flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl'>
 
-          <Link href={'https://twitter.com/zinheinkg'} className=' text-white/90 hover:text-white'> <FaTwitter/>
-          </Link>
+         
           <Link href={'https://medium.com/@kaungzinhein'} className='text-white/90 hover:text-white'> 
           <FaMedium/>
+          </Link>
+
+          <Link href={'https://github.com/Zen-cronic'} className='text-white/90 hover:text-white'> 
+          <FaGithub/>
           </Link>
 
 
