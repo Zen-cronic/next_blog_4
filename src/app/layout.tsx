@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -5,8 +6,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Mi Blog',
-  description: 'By Mi',
+  title: 'Kaung Zin Hein',
+  description: 'Portfolio of Kaung Zin Hein',
 }
 
 export default function RootLayout({
@@ -19,9 +20,12 @@ export default function RootLayout({
       <body className={inter.className}>
         
         <Navbar/>
-        {/* <SearchBar/>  inside navbar*/}
     
-        {children}</body>
+        {children}
+
+      <Footer/>
+        
+        </body>
     </html>
   )
 }

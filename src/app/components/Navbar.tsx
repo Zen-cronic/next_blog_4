@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaYoutube,  FaGithub,  FaMedium} from "react-icons/fa"
+import { FaGithub,  FaMedium, FaLinkedin} from "react-icons/fa"
 import SearchBar from './SearchBar';
 
 function Navbar() {
@@ -11,10 +11,17 @@ function Navbar() {
       
       '>
 
-        <h1 className='text-3xl font-bold text-white grid place-content-center mb-2 md:mb-0'>
-          <Link href={'/'} className='text-white/90  no-underline hover:text-white'> zin
+        <h1 className='text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0'>
+          <Link href={'/'} className='text-white/90  no-underline hover:text-white'> Home
           </Link>
         </h1>
+
+        <h1 className='text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0'>
+          <Link href={'/projects'} className='text-white/90  no-underline hover:text-white'> Projects
+          </Link>
+        </h1>
+
+        
 
         <div id='search-bar' className=' grid place-content-center mb-2 md:mb-0'>
           <SearchBar/> 
@@ -29,6 +36,10 @@ function Navbar() {
 
           <Link href={'https://github.com/Zen-cronic'} className='text-white/90 hover:text-white'> 
           <FaGithub/>
+          </Link>
+
+          <Link href={'https://www.linkedin.com/in/kaung-zin-hein-4284a2258'} className='text-white/90 hover:text-white'> 
+          <FaLinkedin/>
           </Link>
 
 

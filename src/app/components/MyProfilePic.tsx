@@ -8,7 +8,7 @@ export default function MyProfilePic() {
                 className="border-4 border-black dark:border-slate-500 drop-shadow-xl shadow-black 
                mx-auto mt-8 rounded-full"
                src={'/img/profile_600.jpg'}
-               alt="kzh"
+               alt="kaung zin hein"
                width={300}
                height={300}
             />
