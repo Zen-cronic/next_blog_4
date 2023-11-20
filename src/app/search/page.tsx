@@ -40,7 +40,7 @@ function SearchPage() {
 
   return (
     <section className="mt-6 mx-auto max-w-2xl">
-      <p className='mx-auto text-xl dark:text-white/75'>Search results for "{searchQuery}"</p>
+      <p className='mx-auto text-xl dark:text-white/75'>Search results for {searchQuery}</p>
       <ul className='w-full'>
         {data.asyncRes.map((post: BlogPost) => (
           
