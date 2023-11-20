@@ -19,6 +19,14 @@ const projects: Project[] = [
     description: "My portfolio including projects and blog posts",
     imgUrl: "/img/next-blog-sc.jpg"
   },
+
+  {
+    title: "Ecommerce Application",
+    skillStack: ["MERN", "Jest", "Supertest"],
+    sourceCodeLink: "https://github.com/Zen-cronic/Ecommerce-Mern",
+    description: "MERN full stack Ecommerce app with end-2-end tested CRUD functionality",
+    
+  }
 ];
 
 export default projects;
