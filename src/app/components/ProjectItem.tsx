@@ -23,7 +23,7 @@ const ProjectItem : React.FC<ProjectItemProps> =({project}) => {
       />
       <div>
       <p>Title: {project.title}</p>
-      <p>Descp: {project.description}</p>
+      <p>Description: {project.description}</p>
 
      
     </div>

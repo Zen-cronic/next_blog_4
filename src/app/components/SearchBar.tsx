@@ -29,7 +29,7 @@ function SearchBar() {
         type="text"
         value={searchQuery || ""}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="p-1 rounded-md"
+        className="p-1 rounded-md sm:text-start text-center"
         placeholder="search for posts!"
       />
     </form>
