@@ -1,7 +1,7 @@
 import getFormattedDate from "@/lib/getFormattedDate";
 import { getPost, getSortedPostsData } from "@/lib/posts"
 import Link from "next/link";
-
+import parse from "html-react-parser";
 import {notFound} from 'next/navigation'
 
 export function generateStaticParams(){
@@ -52,17 +52,20 @@ export default async function Post({params}: {params: {postId: string}}) {
 
     return (
         <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
-            <h1 className="text-3xl mt-4 mb-0">{title}</h1>
-            <h3 className="text-md hover:opacity-40 mb-0 p-2">{subtitle}</h3>
+            <h1 className="text-4xl mt-4 pt-2">{title}</h1>
+            <h3 className="text-md hover:opacity-40 mb-0 py-2">{subtitle}</h3>
             <p className="mt-0">
                 {pubDate}
             </p>
             <article>
-                <section dangerouslySetInnerHTML={{ __html:
-                    // DOMPurify.sanitize(contentHtml)  }} />
-                    contentHtml  }} />
+                {/* <section dangerouslySetInnerHTML={{ __html:
+                    
+                    contentHtml  }} /> */}
+                <section>
+                    {parse(contentHtml)}
+                </section>
                 <p>
-                    <Link href="/">← Back to home</Link>
+                    <Link href="/">&lt; To home</Link>
                 </p>
             </article>
         </main>

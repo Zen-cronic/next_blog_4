@@ -10,7 +10,6 @@ const postsDir = path.join(process.cwd(), 'src/blogposts')
 
 export function getSortedPostsData() {
     
-    // console.log(process.cwd())
     const fileNames = fs.readdirSync(postsDir)
 
     if(!fileNames){
@@ -63,7 +62,6 @@ export async function getPost(id: string) {
 
     const contentHtml = processedContent.toString()
 
-    //
     const blogPostHtml : BlogPost & {contentHtml: string}={
 
         id,
@@ -71,7 +69,7 @@ export async function getPost(id: string) {
         date: matterResult.data.date,
         subtitle: matterResult.data.subtitle,
 
-        contentHtml   //contetnHtml : contentHtml
+        contentHtml  
         
     }
 
