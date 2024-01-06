@@ -11,14 +11,18 @@ function Navbar() {
       
       '>
 
-        <h1 className='text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0'>
+        <h1 className='text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0'>
           <Link href={'/'} className='text-white/90  no-underline hover:text-white'> Home
           </Link>
         </h1>
 
-        <h1 className='text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0'>
+        <h1 className='text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0'>
           <Link href={'/projects'} className='text-white/90  no-underline hover:text-white'> Projects
           </Link>
+        </h1>
+        <h1 className='text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0'>
+          <a href={'https://kaung-zin-hein.ck.page/a33fa9d0bc'} target="_blank" rel="noopener noreferrer" className='text-white/90  no-underline hover:text-white'> Newsletter
+          </a>
         </h1>
 
         
