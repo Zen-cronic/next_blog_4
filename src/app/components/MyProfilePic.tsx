@@ -12,6 +12,7 @@ export default function MyProfilePic() {
                alt="kaung zin hein"
                width={300}
                height={300}
+               priority
             />
         </section>
     )

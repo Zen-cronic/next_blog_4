@@ -58,9 +58,7 @@ export default async function Post({params}: {params: {postId: string}}) {
                 {pubDate}
             </p>
             <article>
-                {/* <section dangerouslySetInnerHTML={{ __html:
-                    
-                    contentHtml  }} /> */}
+              
                 <section>
                     {parse(contentHtml)}
                 </section>

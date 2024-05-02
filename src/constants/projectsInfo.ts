@@ -1,6 +1,6 @@
 import { Project } from "@/types/project";
 
-const projects: Project[] = [
+const PROJECTS: Project[] = [
   {
     title: "Volunteer Application",
     skillStack: ["MERN", "REST Api"],
@@ -16,7 +16,7 @@ const projects: Project[] = [
     skillStack: ["NextJS", "Tailwind CSS"],
     sourceCodeLink: "https://github.com/Zen-cronic/next_blog_4",
     link: "https://www.kaungzinhein.me/",
-    description: "My portfolio including projects and blog posts",
+    description: "My portfolio including PROJECTS and blog posts",
     imgUrl: "/img/next-blog-sc.jpg",
   },
 
@@ -30,4 +30,4 @@ const projects: Project[] = [
   },
 ];
 
-export default projects;
+export default PROJECTS;
