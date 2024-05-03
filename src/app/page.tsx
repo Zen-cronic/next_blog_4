@@ -1,16 +1,13 @@
-import AboutMe from './components/AboutMe'
-import EmailSignUp from './components/EmailSignUp'
-import MyProfilePic from './components/MyProfilePic'
-import Posts from './components/Posts'
-import ProfileInfo from './components/ProfileInfo'
+import HomePageLinks from "./components/HomePageLinks";
+import ProfileInfo from "./components/ProfileInfo";
+import ProjectsPage from "./projects/page";
 
 export default function Home() {
   return (
-    <main> 
-      
-      <ProfileInfo/>
-      <Posts/>
-      {/* <EmailSignUp/> */}
+    <main>
+      <ProfileInfo />
+      <HomePageLinks/>
+      <ProjectsPage/>
     </main>
-  )
+  );
 }

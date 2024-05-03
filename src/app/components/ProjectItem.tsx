@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+
 import Image from "next/image";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
@@ -9,7 +9,7 @@ export interface ProjectItemProps {
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   return (
-    <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden mb-2">
+    <div className="border-2 border-stone-900 dark:border-slate-500 rounded-md overflow-hidden mb-2 px-2">
       <a href={project.link}>
         <Image
           className="border-black dark:border-slate-500 drop-shadow-xl shadow-black 
@@ -20,8 +20,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
           height={500}
         />
         <div>
-          <p>Title: {project.title}</p>
-          <p>Description: {project.description}</p>
+          <p className="text-lg"><strong>{project.title}</strong></p>
+          <p>{project.description}</p>
         </div>
 
         <br />

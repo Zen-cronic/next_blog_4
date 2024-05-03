@@ -1,6 +1,13 @@
-import { Project } from "@/types/project";
-
 const PROJECTS: Project[] = [
+  {
+    title: "scope-logger",
+    skillStack: ["NodeJS"],
+    link: "https://www.npmjs.com/package/scope-logger",
+    sourceCodeLink: "https://github.com/Zen-cronic/scope-logger",
+    description:
+      "A NodeJs library that logs a variable and a sequence of scopes through which it's accessed",
+    imgUrl: "/img/scope-logger-in-action.png",
+  },
   {
     title: "Volunteer Application",
     skillStack: ["MERN", "REST Api"],
@@ -12,21 +19,12 @@ const PROJECTS: Project[] = [
   },
 
   {
-    title: "Personal Blog/Portfolio Website",
+    title: "Portfolio Website",
     skillStack: ["NextJS", "Tailwind CSS"],
     sourceCodeLink: "https://github.com/Zen-cronic/next_blog_4",
     link: "https://www.kaungzinhein.me/",
-    description: "My portfolio including PROJECTS and blog posts",
+    description: "My portfolio including projects, blog posts, and talks",
     imgUrl: "/img/next-blog-sc.jpg",
-  },
-
-  {
-    title: "Ecommerce Application",
-    skillStack: ["MERN", "Jest", "Supertest"],
-    sourceCodeLink: "https://github.com/Zen-cronic/Ecommerce-Mern",
-    description:
-      "MERN full stack Ecommerce app with end-2-end tested CRUD functionality",
-    imgUrl: "/img/ecomm-mern-sc.jpg",
   },
 ];
 

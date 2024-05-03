@@ -1,38 +1,42 @@
-import { Talk } from "@/types/talk";
+import getFormattedDate from "@/lib/getFormattedDate";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export interface TalkExcerptProps {
+interface TalkExcerptProps {
   talk: Talk;
 }
 
-const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
+export default function TalkExcerpt({ talk }: TalkExcerptProps) {
+  const { description, eventDate, eventName } = talk;
+  const formattedDate = getFormattedDate(eventDate);
+
   return (
-    <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden mb-2">
-      <Image
-        className="border-black dark:border-slate-500 drop-shadow-xl shadow-black 
+    <div className="border-2 border-stone-900 dark:border-slate-400 rounded-md overflow-hidden mb-2 px-2">
+      <Link href={`/talks/${talk.id}`}>
+        <Image
+          className="border-black dark:border-slate-500 drop-shadow-xl shadow-black 
       mx-auto mt-6 mb-3 w-full object-cover cursor-pointer"
-        src={talk.imgUrl}
-        alt="Project Image"
-        width={500}
-        height={500}
-      />
-      <div>
-        <p>Title: {talk.title}</p>
-        <p>Description: {talk.description}</p>
-        <p>Event: {talk.eventName}</p>
-      </div>
+          src={talk.imgUrl}
+          alt="Project Image"
+          width={500}
+          height={500}
+        />
+        <div>
+          <p className="text-lg">
+            <strong>{talk.title} </strong>
+          </p>
+          <p className="dark:text-slate-400">Description: {description}</p>
+          <p className="dark:text-slate-400">Event: {eventName}</p>
+          <p className="dark:text-slate-400">Date: {formattedDate}</p>
+        </div>
 
-      <br />
+        <br />
 
-      <Link href={`/talks/${talk.date}`}>
         <p>
           <span className="flex items-center">View more</span>
         </p>
       </Link>
     </div>
   );
-};
-
-export default TalkExcerpt;
+}
