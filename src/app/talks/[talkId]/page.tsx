@@ -3,6 +3,13 @@ import { getTalk, getSortedTalksData } from "@/lib/talks";
 import Link from "next/link";
 import parse from "html-react-parser";
 import { notFound } from "next/navigation";
+import {
+  FaCalendarAlt,
+  FaLaptop,
+  FaLaptopCode,
+  FaMapMarked,
+  FaMapMarkedAlt,
+} from "react-icons/fa";
 
 export function generateStaticParams() {
   const talks = getSortedTalksData();
@@ -42,7 +49,7 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
     await getTalk(talkId);
 
   const pubDate = getFormattedDate(date);
-  const formattedEventDate = getFormattedDate(eventDate)
+  const formattedEventDate = getFormattedDate(eventDate);
   return (
     <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
       <h1 className="text-5xl mt-4 pt-2">{title}</h1>
@@ -53,16 +60,26 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
       </article>
 
       <h3 className="text-md hover:opacity-40 mb-0 py-2">Info</h3>
-      <ul>
-        <li>Date: {formattedEventDate}</li>
-        <li>Event: {eventName}</li>
-        <li>
-          Slides:{" "}
-          <a href={slides} target="_blank" rel="noopener noreferrer">
+      <div>
+        <p className="flex items-center">
+          <FaCalendarAlt className=" mr-2" /> {formattedEventDate}
+        </p>
+        <p className="flex items-center">
+          <FaMapMarked className=" mr-2" /> {eventName}
+        </p>
+        <p className="flex items-center">
+          <FaLaptopCode className=" mr-2" />
+          Slides: 
+          <a
+            href={slides}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2"
+          >
             Link
           </a>
-        </li>
-      </ul>
+        </p>
+      </div>
 
       <p>
         <Link href="/">&lt; To home</Link>

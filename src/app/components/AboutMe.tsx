@@ -18,9 +18,9 @@ function AboutMe() {
       </p>
       <br />
 
-      <p className=" text-2xl max-w-xl my-2 font-bold ">
+      {/* <p className=" text-2xl max-w-xl my-2 font-bold ">
         <Link href="/projects">View my projects here</Link>&#33;
-      </p>
+      </p> */}
     </div>
   );
 }
