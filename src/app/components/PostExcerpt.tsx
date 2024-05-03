@@ -10,7 +10,7 @@ type Props= {
 
 // wrg if post w/o {}, Props is an obj type wiht post prop.
 //{post} == an obj with post prop, whihc should be the same as the props of Props
-function ListItem({post}: Props) {
+function PostExcerpt({post}: Props) {
 
   const{id, title, date, subtitle} = post
   const formattedDate = getFormattedDate(date)
@@ -24,4 +24,4 @@ function ListItem({post}: Props) {
 )
 }
 
-export default ListItem;
+export default PostExcerpt;

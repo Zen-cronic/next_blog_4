@@ -1,10 +1,10 @@
-import { Talk } from "@/types/talk";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export interface TalkExcerptProps {
-  talk: Talk;
+  talk: TalkExcerpt & Talk;
 }
 
 const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
@@ -26,7 +26,8 @@ const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
 
       <br />
 
-      <Link href={`/talks/${talk.date}`}>
+      {/* <Link href={`/talks/${talk.id}`}> */}
+      <Link href={`/talks/${talk.id}`}>
         <p>
           <span className="flex items-center">View more</span>
         </p>

@@ -3,10 +3,9 @@ import remarkHtml from "remark-html";
 import matter from "gray-matter";
 import path from "path";
 import fs from "fs";
-import getContentDir from "./getContentDir";
+import {getContentDir} from "./getPath";
 
-const postsDir = getContentDir("blogposts")
-
+const postsDir = getContentDir("blogposts");
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDir);

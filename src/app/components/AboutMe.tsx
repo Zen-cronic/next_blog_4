@@ -11,7 +11,7 @@ function AboutMe() {
         Software Developer
       </p>
       <p className="text-xl max-w-xl my-3 font-semibold">
-        I&apos;m a self&#45;taught web programmer&#44; most interested in backend development&#46; Currently&#44; the MERN stack is my main
+        I&apos;m a self&#45;taught web programmer&#44; focusing in backend development&#46; Currently&#44; the MERN stack is my main
         toolchain&#44; with which I&apos;ve built{" "}
         <strong>applicable real&#45;life</strong> projects&#46;
       </p>
