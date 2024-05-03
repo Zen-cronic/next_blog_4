@@ -1,3 +1,4 @@
+import getFormattedDate from "@/lib/getFormattedDate";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +7,10 @@ interface TalkExcerptProps {
   talk: Talk;
 }
 
-const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
+export default function TalkExcerpt({ talk }: TalkExcerptProps) {
+  const { description, eventDate, eventName } = talk;
+  const formattedDate = getFormattedDate(eventDate);
+
   return (
     <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden mb-2">
       <Image
@@ -21,9 +25,9 @@ const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
         <p className="text-lg">
           <strong>{talk.title} </strong>
         </p>
-        <p className="dark:text-slate-400">Description: {talk.description}</p>
-        <p className="dark:text-slate-400">Event: {talk.eventName}</p>
-        <p className="dark:text-slate-400">Date: {talk.eventName}</p>
+        <p className="dark:text-slate-400">Description: {description}</p>
+        <p className="dark:text-slate-400">Event: {eventName}</p>
+        <p className="dark:text-slate-400">Date: {formattedDate}</p>
       </div>
 
       <br />
@@ -35,6 +39,4 @@ const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
       </Link>
     </div>
   );
-};
-
-export default TalkExcerpt;
+}

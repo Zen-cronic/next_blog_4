@@ -34,6 +34,15 @@ function Navbar() {
 
         <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
           <Link
+            href={"/posts"}
+            className="text-white/90  no-underline hover:text-white"
+          >
+            {" "}
+            Blog
+          </Link>
+        </h1>
+        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
+          <Link
             href={"/talks"}
             className="text-white/90  no-underline hover:text-white"
           >

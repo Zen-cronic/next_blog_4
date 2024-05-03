@@ -42,7 +42,7 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
     await getTalk(talkId);
 
   const pubDate = getFormattedDate(date);
-
+  const formattedEventDate = getFormattedDate(eventDate)
   return (
     <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
       <h1 className="text-5xl mt-4 pt-2">{title}</h1>
@@ -54,7 +54,7 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
 
       <h3 className="text-md hover:opacity-40 mb-0 py-2">Info</h3>
       <ul>
-        <li>Date: {eventDate}</li>
+        <li>Date: {formattedEventDate}</li>
         <li>Event: {eventName}</li>
         <li>
           Slides:{" "}

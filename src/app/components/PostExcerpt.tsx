@@ -2,13 +2,11 @@ import getFormattedDate from "@/lib/getFormattedDate";
 import Link from "next/link";
 import React from "react";
 
-type Props = {
+type PostExcerptProps = {
   post: BlogPost;
 };
 
-// wrg if post w/o {}, Props is an obj type wiht post prop.
-//{post} == an obj with post prop, whihc should be the same as the props of Props
-function PostExcerpt({ post }: Props) {
+export default function PostExcerpt({ post }: PostExcerptProps) {
   const { id, title, date, subtitle } = post;
   const formattedDate = getFormattedDate(date);
   return (
@@ -25,5 +23,3 @@ function PostExcerpt({ post }: Props) {
     </li>
   );
 }
-
-export default PostExcerpt;

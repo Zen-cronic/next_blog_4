@@ -1,7 +1,7 @@
 import { getSortedPostsData } from "@/lib/posts";
-import PostExcerpt from "./PostExcerpt";
+import PostExcerpt from "../components/PostExcerpt";
 
-export default function Posts() {
+export default function PostsList() {
   const posts = getSortedPostsData();
 
   return (
