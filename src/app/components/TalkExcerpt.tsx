@@ -1,10 +1,9 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export interface TalkExcerptProps {
-  talk: TalkExcerpt & Talk;
+interface TalkExcerptProps {
+  talk: Talk;
 }
 
 const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
@@ -19,14 +18,15 @@ const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
         height={500}
       />
       <div>
-        <p>Title: {talk.title}</p>
+        <p className="text-lg">
+          <strong>{talk.title} </strong>
+        </p>
         <p>Description: {talk.description}</p>
         <p>Event: {talk.eventName}</p>
       </div>
 
       <br />
 
-      {/* <Link href={`/talks/${talk.id}`}> */}
       <Link href={`/talks/${talk.id}`}>
         <p>
           <span className="flex items-center">View more</span>

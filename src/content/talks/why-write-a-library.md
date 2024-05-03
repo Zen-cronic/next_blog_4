@@ -11,6 +11,9 @@ slides: "https://docs.google.com/presentation/d/1H9Nc3KR0HWgp8yAxtDi6awdoE2AEjvm
 
 _This is a blog version of the talk I gave at [TorontoJS](https://www.linkedin.com/company/torontojs/) Lightning Talks event on Apr 30, 2024._
 
+![Me at talk event, intro slide](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zicy4szz0l9gmsx08xpb.jpg)
+
+
 ## My technical pet peeve
 
 ![console-log](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h7vmgyh5dpuvx9gzhiwd.png)

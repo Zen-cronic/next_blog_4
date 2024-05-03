@@ -1,18 +1,19 @@
-import TALKS from "@/constants/talksInfo";
-import React from "react";
+import { getSortedTalksData } from "@/lib/talks";
 import TalkExcerpt from "../components/TalkExcerpt";
 
-function TalksList() {
+export default function TalksList() {
+  const talks = getSortedTalksData();
+
   return (
-    <div className="mx-auto max-w-5xl">
-      {/* grid-rows-3  */}
-      <div className="grid gap-5 justify-center items-center mt-6">
-        {TALKS.map((talk, idx) => (
-          <TalkExcerpt talk={talk} key={idx} />
+    <section className="mt-6 mx-auto max-w-2xl px-4 sm:px-0 ">
+      <h2 className="text-4xl font-bold dark:text-white/90">
+        Talks
+      </h2>
+      <ul className="w-full">
+        {talks.map((talk) => (
+          <TalkExcerpt key={talk.id} talk={talk} />
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }
-
-export default TalksList;

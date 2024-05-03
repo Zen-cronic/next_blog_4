@@ -38,13 +38,13 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
     notFound();
   }
 
-  const { title, date, contentHtml, subtitle } = await getTalk(talkId);
+  const { title, eventDate, contentHtml, subtitle } = await getTalk(talkId);
 
-  const pubDate = getFormattedDate(date);
+  const pubDate = getFormattedDate(eventDate);
 
   return (
     <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
-      <h1 className="text-4xl mt-4 pt-2">{title}</h1>
+      <h1 className="text-5xl mt-4 pt-2">{title}</h1>
       <h3 className="text-md hover:opacity-40 mb-0 py-2">{subtitle}</h3>
       <p className="mt-0">{pubDate}</p>
       <article>

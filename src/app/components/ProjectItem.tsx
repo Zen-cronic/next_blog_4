@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+
 import Image from "next/image";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
@@ -20,8 +20,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
           height={500}
         />
         <div>
-          <p>Title: {project.title}</p>
-          <p>Description: {project.description}</p>
+          <p className="text-lg"><strong>{project.title}</strong></p>
+          <p>{project.description}</p>
         </div>
 
         <br />

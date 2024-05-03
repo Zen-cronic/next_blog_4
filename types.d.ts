@@ -17,6 +17,12 @@ type Talk = {
   slides: string;
 };
 
-type TalkExcerpt = Omit<Talk, 
-// "id" | 
-"subtitle" | "slides" | "date">
+type Project = {
+  title: string;
+
+  skillStack: string[];
+  sourceCodeLink: string;
+  description: string;
+  imgUrl?: string;
+  link?: string;
+};

@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import path from "path";
 import fs from "fs";
 
-const talksDir = getContentDir("blogposts");
+const talksDir = getContentDir("talks");
 
 export function getSortedTalksData() {
   const fileNames = fs.readdirSync(talksDir);
@@ -59,7 +59,7 @@ export async function getTalk(id: string) {
   const contentHtml = processedContent.toString();
 
   const { data: matterData } = matterResult;
-  
+
   const talkHtml: Talk & { contentHtml: string } = {
     id,
     title: matterData.title,
