@@ -29,7 +29,7 @@ function SearchPage() {
     { revalidateOnFocus: false }
   );
 
-  console.log("data fetched from client: ", data);
+  // console.log("data fetched from client: ", data);
 
   if (!data?.asyncRes) {
     return null;
@@ -42,7 +42,6 @@ function SearchPage() {
       </p>
       <ul className="w-full">
         {data.asyncRes.map((post: BlogPost) => (
-          // <li key={idx}>{post.title}</li>
           <ListItem post={post} key={post.id} />
         ))}
       </ul>

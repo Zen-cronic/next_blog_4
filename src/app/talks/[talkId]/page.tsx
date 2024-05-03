@@ -38,9 +38,10 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
     notFound();
   }
 
-  const { title, eventDate, contentHtml, subtitle } = await getTalk(talkId);
+  const { title, eventDate, contentHtml, subtitle, date, slides, eventName } =
+    await getTalk(talkId);
 
-  const pubDate = getFormattedDate(eventDate);
+  const pubDate = getFormattedDate(date);
 
   return (
     <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
@@ -49,10 +50,23 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
       <p className="mt-0">{pubDate}</p>
       <article>
         <section>{parse(contentHtml)}</section>
-        <p>
-          <Link href="/">&lt; To home</Link>
-        </p>
       </article>
+
+      <h3 className="text-md hover:opacity-40 mb-0 py-2">Info</h3>
+      <ul>
+        <li>Date: {eventDate}</li>
+        <li>Event: {eventName}</li>
+        <li>
+          Slides:{" "}
+          <a href={slides} target="_blank" rel="noopener noreferrer">
+            Link
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        <Link href="/">&lt; To home</Link>
+      </p>
     </main>
   );
 }

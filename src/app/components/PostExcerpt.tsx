@@ -20,7 +20,7 @@ function PostExcerpt({ post }: Props) {
         {title}
       </Link>
       <br />
-      <p className="text-base font-bold dark:text-slate-400 ">{subtitle}</p>
+      <p className="text-base font-bold dark:text-slate-400">{subtitle}</p>
       <p className="text-xs mt-1">{formattedDate}</p>
     </li>
   );

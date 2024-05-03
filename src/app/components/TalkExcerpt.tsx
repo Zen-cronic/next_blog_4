@@ -21,8 +21,9 @@ const TalkExcerpt: React.FC<TalkExcerptProps> = ({ talk }) => {
         <p className="text-lg">
           <strong>{talk.title} </strong>
         </p>
-        <p>Description: {talk.description}</p>
-        <p>Event: {talk.eventName}</p>
+        <p className="dark:text-slate-400">Description: {talk.description}</p>
+        <p className="dark:text-slate-400">Event: {talk.eventName}</p>
+        <p className="dark:text-slate-400">Date: {talk.eventName}</p>
       </div>
 
       <br />
