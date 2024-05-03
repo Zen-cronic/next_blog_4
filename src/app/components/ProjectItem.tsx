@@ -9,7 +9,7 @@ export interface ProjectItemProps {
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   return (
-    <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden mb-2">
+    <div className="border-2 border-stone-900 dark:border-slate-500 rounded-md overflow-hidden mb-2">
       <a href={project.link}>
         <Image
           className="border-black dark:border-slate-500 drop-shadow-xl shadow-black 

@@ -1,5 +1,14 @@
 const PROJECTS: Project[] = [
   {
+    title: "scope-logger",
+    skillStack: ["NodeJS"],
+    link: "https://www.npmjs.com/package/scope-logger",
+    sourceCodeLink: "https://github.com/Zen-cronic/scope-logger",
+    description:
+      "A NodeJs library that logs a variable and a sequence of scopes through which it's accessed",
+    imgUrl: "/img/scope-logger-in-action.png",
+  },
+  {
     title: "Volunteer Application",
     skillStack: ["MERN", "REST Api"],
     sourceCodeLink: "https://github.com/Zen-cronic/volun-mern",

@@ -2,7 +2,7 @@ import PROJECTS from "@/constants/projectsInfo";
 import React from "react";
 import ProjectItem from "../components/ProjectItem";
 
-function ProjectsPage() {
+export default function ProjectsPage() {
   return (
     <div className="mx-auto max-w-5xl">
       {/* grid-rows-3  */}
@@ -16,4 +16,4 @@ function ProjectsPage() {
   );
 }
 
-export default ProjectsPage;
+

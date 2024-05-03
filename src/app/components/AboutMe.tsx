@@ -8,17 +8,18 @@ function AboutMe() {
         Zin
       </h1>
       <p className="text-base md:text-2xl my-1 font-light">
-        Software Developer
+        {"{Software Developer}"}
       </p>
       <p className="text-xl max-w-xl my-3 font-semibold">
-        I&apos;m a self&#45;taught web programmer&#44; focusing in backend development&#46; Currently&#44; the MERN stack is my main
-        toolchain&#44; with which I&apos;ve built{" "}
-        <strong>applicable real&#45;life</strong> projects&#46;
+        I&apos;m a self&#45;taught programmer&#44; specializing in backend web
+        development&#46; Currently&#44; I am focusing on <em>NodeJS</em> and {" "}
+        <em>React</em> to create <strong>practical&#44; real&#45;life</strong>{" "}
+        projects&#46;
       </p>
       <br />
 
       <p className=" text-2xl max-w-xl my-2 font-bold ">
-        <Link href="/projects">Check out my projects here</Link>&#33;
+        <Link href="/projects">View my projects here</Link>&#33;
       </p>
     </div>
   );
