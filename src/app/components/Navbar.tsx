@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import { FaGithub, FaMedium, FaLinkedin } from "react-icons/fa";
 import SearchBar from "./SearchBar";
-import SearchBarFallback from "./SearchBarFallback";
 
 function Navbar() {
   return (
@@ -56,14 +55,12 @@ function Navbar() {
           </a>
         </h1> */}
 
-        <Suspense fallback={<SearchBarFallback />}>
           <div
             id="search-bar"
             className=" grid place-content-center mb-2 md:mb-0"
           >
             <SearchBar />
           </div>
-        </Suspense>
 
         <div
           id="all-social-links"
