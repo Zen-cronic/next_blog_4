@@ -1,5 +1,3 @@
-import MillionLint from "@million/lint";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -14,4 +12,4 @@ const nextConfig = {
   },
 };
 
-export default MillionLint.next({ rsc: true })(nextConfig);
+module.exports = nextConfig;
