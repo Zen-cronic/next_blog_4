@@ -27,7 +27,6 @@ export function getContentDir(lastSegment: string): string {
 export function getFullPath() {}
 
 function getDir(...args: string[]) {
-  // const dir = path.join(process.cwd(), ...args);
 
   const dir = path.join(...args)
   console.info({dir})
