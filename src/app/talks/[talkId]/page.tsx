@@ -5,10 +5,9 @@ import parse from "html-react-parser";
 import { notFound } from "next/navigation";
 import {
   FaCalendarAlt,
-  FaLaptop,
   FaLaptopCode,
   FaMapMarked,
-  FaMapMarkedAlt,
+
 } from "react-icons/fa";
 
 export function generateStaticParams() {
