@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -17,16 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <>
-     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Navbar />
+      <html lang="en">
+        <body className={`${inter.className} flex flex-col min-h-screen`}>
+          <Suspense>
+            <Navbar />
 
-        <main className="flex-grow">{children}</main>
-        <Footer />
-       
-      </body>
-    </html>
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </Suspense>
+        </body>
+      </html>
     </>
-   
   );
 }

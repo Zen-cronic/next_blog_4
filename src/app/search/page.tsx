@@ -26,7 +26,7 @@ function SearchPage() {
   const { data, isLoading } = useSWR(
     `/api/search?q=${encodedSearchQuery}`,
     fetchPosts,
-    { revalidateOnFocus: false }
+    { revalidateOnFocus: false ,}
   );
 
   // console.log("data fetched from client: ", data);
