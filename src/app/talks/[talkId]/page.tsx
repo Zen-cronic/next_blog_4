@@ -3,12 +3,7 @@ import { getTalk, getSortedTalksData } from "@/lib/talks";
 import Link from "next/link";
 import parse from "html-react-parser";
 import { notFound } from "next/navigation";
-import {
-  FaCalendarAlt,
-  FaLaptopCode,
-  FaMapMarked,
-
-} from "react-icons/fa";
+import { FaCalendarAlt, FaLaptopCode, FaMapMarked } from "react-icons/fa";
 
 export function generateStaticParams() {
   const talks = getSortedTalksData();
@@ -41,6 +36,7 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
   const talks = getSortedTalksData();
 
   if (!talks.find((talk) => talk.id === talkId)) {
+    console.error(`Talk with ID ${talkId} not found.`);
     notFound();
   }
 
@@ -68,7 +64,7 @@ export default async function Talk({ params }: { params: { talkId: string } }) {
         </p>
         <p className="flex items-center">
           <FaLaptopCode className=" mr-2" />
-          Slides: 
+          Slides:
           <a
             href={slides}
             target="_blank"
