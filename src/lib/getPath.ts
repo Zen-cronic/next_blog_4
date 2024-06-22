@@ -16,7 +16,7 @@ export function getContentDir(lastSegment: string): string {
 
   //'C:\...\next_blog_4\\public\\content\\talks' Exists!
   // const dir = getDir(process.cwd() , "public", "content", lastSegment)
-  const dir = getDir(__dirname , "..", "..", "public", "content", lastSegment)
+  const dir = getDir(__dirname , "..", "..", "content", lastSegment)
 
   // const dir = getDir(process.cwd(), "..", ".." , "public", "content", lastSegment)
 
