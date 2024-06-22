@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React, { Suspense } from "react";
-import { FaGithub, FaMedium, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaMedium, FaLinkedin, FaDev } from "react-icons/fa";
 import SearchBar from "./SearchBar";
-import SearchBarFallback from "./SearchBarFallback";
 
 function Navbar() {
   return (
@@ -12,7 +11,7 @@ function Navbar() {
       
       "
       >
-        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
+        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 mx-2 md:mb-0 ">
           <Link
             href={"/"}
             className="text-white/90  no-underline hover:text-white"
@@ -22,7 +21,7 @@ function Navbar() {
           </Link>
         </h1>
 
-        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
+        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 mx-2 md:mb-0">
           <Link
             href={"/projects"}
             className="text-white/90  no-underline hover:text-white"
@@ -32,7 +31,7 @@ function Navbar() {
           </Link>
         </h1>
 
-        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
+        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 mx-2 md:mb-0">
           <Link
             href={"/posts"}
             className="text-white/90  no-underline hover:text-white"
@@ -41,7 +40,7 @@ function Navbar() {
             Blog
           </Link>
         </h1>
-        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 md:mb-0">
+        <h1 className="text-2xl sm:text-lg font-bold text-white grid place-content-center mb-2 mx-2 md:mb-0">
           <Link
             href={"/talks"}
             className="text-white/90  no-underline hover:text-white"
@@ -56,24 +55,28 @@ function Navbar() {
           </a>
         </h1> */}
 
-        <Suspense fallback={<SearchBarFallback />}>
-          <div
-            id="search-bar"
-            className=" grid place-content-center mb-2 md:mb-0"
-          >
-            <SearchBar />
-          </div>
-        </Suspense>
+        <div
+          id="search-bar"
+          className="grid place-content-center mb-2 md:mb-0 mx-4"
+        >
+          <SearchBar />
+        </div>
 
         <div
           id="all-social-links"
-          className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl"
+          className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-3xl lg:text-5xl mx-2"
         >
           <Link
             href={"https://medium.com/@kaungzinhein"}
             className="text-white/90 hover:text-white"
           >
             <FaMedium />
+          </Link>
+          <Link
+            href={"https://dev.to/zin_kg"}
+            className="text-white/90 hover:text-white"
+          >
+            <FaDev />
           </Link>
 
           <Link
